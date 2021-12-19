@@ -10,7 +10,7 @@
 
 # installing python 2.7.3
 mkdir -p ~/local
-wget http://www.python.org/ftp/python/2.7.3/Python-2.7.3.tgz
+wget https://www.python.org/ftp/python/2.7.3/Python-2.7.3.tgz
 tar xvzf Python-2.7.3.tgz
 cd Python-2.7.3
 ./configure
