@@ -1,4 +1,4 @@
-###ODKC Backup With AWS S3
+### ODKC Backup With AWS S3
 This aims to employ the use of AWS S3 as a backup storage.
 ## Table of contents
 * [General info](#general-info)
