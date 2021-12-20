@@ -13,6 +13,6 @@ sleep 5s
 lastbackupfile=`ls -Art | tail -n 1`
 
 # upload the latest backup to the server
-aws s3 cp “$lastbackupfile” s3://name_of_bucket/
+aws s3 cp $lastbackupfile s3://name_of_bucket/
 
 
