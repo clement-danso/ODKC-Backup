@@ -4,4 +4,4 @@
 lastbackupfile=`ls -Art | tail -n 1`
 
 # upload the latest backup to the server
-aws s3 cp $lastbackupfile s3://quodatrybucket/
+aws s3 mv $lastbackupfile s3://quodatrybucket/
