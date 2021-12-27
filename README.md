@@ -59,12 +59,12 @@ The AWS CLI has already been installed from the script you run. To configure it,
 $ aws configure
 ```
 * Enter the following when prompted:
-_AWS Access Key ID [None]:_ enter the Access Key Id from the credentials.csv file you downloaded in ‘Create an AWS IAM User’ step.
-Note: this should look something like _AKIAPWINCOKAO3U4FWTN_
-_AWS Secret Access Key [None]:_ enter the Secret Access Key from the credentials.csv file you downloaded in step 1 part d
-Note: this should look something like _5dqQFBaGuPNf5z7NhFrgou4V5JJNaWPy1XFzBfX3_
-_Default region name [None]: enter us-east-1_
-_Default output format [None]: enter json_
+_AWS Access Key ID [None]:_ enter the Access Key Id from the credentials.csv file you downloaded in ‘Create an AWS IAM User’ step.  
+**Note: this should look something like _AKIAPWINCOKAO3U4FWTN_**  
+_AWS Secret Access Key [None]:_ enter the Secret Access Key from the credentials.csv file you downloaded in Create an AWS IAM User’ step.  
+**Note: this should look something like _5dqQFBaGuPNf5z7NhFrgou4V5JJNaWPy1XFzBfX3_**  
+_Default region name [None]: enter us-east-1_  
+_Default output format [None]: enter json_  
 
 ## Create an S3 Bucket on AWS
 If you do not have one, you can create one by running :
