@@ -1,11 +1,12 @@
 ### ODKC Backup With AWS S3
 This aims to employ the use of AWS S3 as a backup storage.
 ## Table of contents
-* 
-* [General info](#general-info)
-* [Technologies](#technologies)
-* [Setup](#setup)
-
+* [Pre-requisites](#pre-requisites)
+* [Clone/Download Backup Scripts](#clone-backup-script)
+* [Install python 2.7, pip, and AWS CLI](#install-env)
+* [Configure AWS CLI](#Configure-AWS-CLI)
+* [Create an S3 Bucket on AWS](create-s3-bucket)
+* [Setup cron jobs to run scripts](setup-cron-jobs)
 ## Pre-requisites
 * ODK Central URL
 * Administrator account on ODK Central, with credentials readily available
@@ -16,16 +17,13 @@ This aims to employ the use of AWS S3 as a backup storage.
 ## Clone/Download Backup Scripts
 * Run:
 ```
-git clone https://github.com/clement-danso/ODKC-Backup.git
+$ git clone https://github.com/clement-danso/ODKC-Backup.git
+$ cd ODKC-Backup
 ```
-
-* cd ODKC-Backup
 
 * Open to the backup script to input administrator credentials for the user that will perform the backup:
-
-* Run: 
 ```
-nano ODKC-backup.py
+$ nano ODKC-backup.py
 ```
 * And update the following fields with administrator credentials
 
@@ -48,17 +46,16 @@ Press CTRL+x to save and close
 
 
 ## Install python 2.7, pip, and AWS CLI
-While you’re still in ‘ODKC-Backup’ directory, install python 2.7,  pip and AWS CLI with the env_setup.sh script
-* Run:
+* While you’re still in ‘ODKC-Backup’ directory, install python 2.7,  pip and AWS CLI with the env_setup.sh script
 ```
-bash env_setup.sh
+$ bash env_setup.sh
 ```
 
 ## Configure AWS CLI
 The AWS CLI has already been installed from the script you run. To configure it,
 * Type the command below and press Enter.
 ```
-aws configure
+$ aws configure
 ```
 * Enter the following when prompted:
 _AWS Access Key ID [None]:_ enter the Access Key Id from the credentials.csv file you downloaded in ‘Create an AWS IAM User’ step.
@@ -71,21 +68,21 @@ _Default output format [None]: enter json_
 ## Create an S3 Bucket on AWS
 If you do not have one, you can create one by running :
 ```
-aws s3 mb s3://name_of_bucket
+$ aws s3 mb s3://name_of_bucket
 ```
 _Note: bucket naming has some restrictions; one of those restrictions is that bucket names must be globally unique (e.g. two different AWS users can not have the same bucket name)_
 
 * Now open the ‘ODKC-backup.sh’ file
 ```
-nano ODKC-backup.sh
+$ nano ODKC-backup.sh
 ```
-* On the last line (AWS Command), replace name_of_bucket with the *name of the bucket* you just created on AWS S3, or replace it with an already existing bucket name you already have.
+* On the last line (AWS Command), replace name_of_bucket with the **name of the bucket** you just created on AWS S3, or replace it with an already existing bucket name you already have.
 
 
 ## Setup cron jobs to run scripts
 * To schedule cron tasks to run the ODKC-backup.sh script periodically, run:
 ```
-aws s3 mb s3://name_of_bucket
+$ aws s3 mb s3://name_of_bucket
 ```
 
 * At the very bottom, schedule the cron job in the format _***** command_
@@ -95,11 +92,11 @@ For example if you want backups to be made hourly:
 ```
 This will run the job hourly.
 
-* Again set up a cron task to run the *backup_upload.sh* file 10-15 mins after ODK-backup.sh is run
+* Again set up a cron task to run the **backup_upload.sh** file 10-15 mins after ODK-backup.sh is run
 This will move the backup file downloaded to the Central server to the AWS S3 bucket configured.
 
 ```
 10 * * * * bash /home/quoda/ODK-Backup/backup_upload.sh
 ```
 
-This will run this job 10 mins after hours.
+This will run this job 10-15 mins after every hour.
