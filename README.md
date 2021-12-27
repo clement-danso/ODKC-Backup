@@ -2,8 +2,8 @@
 This aims to employ the use of AWS S3 as a backup storage.
 ## Table of contents
 * [Pre-requisites](#pre-requisites)
-* [Clone/Download Backup Scripts](#Clone/Download-Backup-Scripts)
-* [Install python 2.7, pip, and AWS CLI](#Install-python-2.7,-pip,-and-AWS-CLI)
+* [Clone/Download Backup Scripts](#Clone-Download-Backup-Scripts)
+* [Install python 2.7, pip, and AWS CLI](#Install-python-2-7--pip--and-AWS-CLI)
 * [Configure AWS CLI](#Configure-AWS-CLI)
 * [Create an S3 Bucket on AWS](#Create-an-S3-Bucket-on-AWS)
 * [Setup cron jobs to run scripts](#Setup-cron-jobs-to-run-scripts)
