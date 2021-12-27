@@ -15,7 +15,7 @@ This aims to employ the use of AWS S3 as a backup storage.
 * Access Key ID, and Secret Access Key in the credentials file downloaded from creating the AWS IAM User.
 
 
-## Clone/Download Backup Scripts
+## Download Backup Scripts
 * Run:
 ```
 $ git clone https://github.com/clement-danso/ODKC-Backup.git
