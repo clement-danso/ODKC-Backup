@@ -2,7 +2,7 @@
 This aims to employ the use of AWS S3 as a backup storage.
 ## Table of contents
 * [Pre-requisites](#pre-requisites)
-* [Clone/Download Backup Scripts](#Clone-Download-Backup-Scripts)
+* [Download Backup Scripts](#Download-Backup-Scripts)
 * [Install python 2.7, pip, and AWS CLI](#Install-python-2-7--pip--and-AWS-CLI)
 * [Configure AWS CLI](#Configure-AWS-CLI)
 * [Create an S3 Bucket on AWS](#Create-an-S3-Bucket-on-AWS)
@@ -11,7 +11,7 @@ This aims to employ the use of AWS S3 as a backup storage.
 ## Pre-requisites
 * ODK Central URL
 * Administrator account on ODK Central, with credentials readily available
-* Create an AWS IAM User (procedure)
+* Create an AWS IAM User ([Procedure](https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/))
 * Access Key ID, and Secret Access Key in the credentials file downloaded from creating the AWS IAM User.
 
 
