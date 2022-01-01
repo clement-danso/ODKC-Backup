@@ -13,7 +13,7 @@ This aims to employ the use of AWS S3 as a backup storage.
 * Administrator account on ODK Central, with credentials readily available
 * Create an AWS IAM User ([Procedure](https://aws.amazon.com/getting-started/hands-on/backup-to-s3-cli/))
 * Access Key ID, and Secret Access Key in the credentials file downloaded from creating the AWS IAM User.
-
+**NB: Keep this credential file safely somewhere since the Access Key ID, and Secret Access Key will be needed during a restore of a backup**
 
 ## Download Backup Scripts
 * Run:
